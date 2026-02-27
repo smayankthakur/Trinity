@@ -12,8 +12,8 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
   return (
     <section className="section-wrap blueprint-grid grid items-center gap-12 lg:grid-cols-[1.08fr_1fr]">
       <div className="surface-panel p-8 md:p-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">Sitelytc Digital Media</p>
-        <h1 className="mt-5 font-heading text-4xl font-semibold tracking-[0.06em] md:text-5xl">{title}</h1>
+        <p className="label-precision text-text-muted">Sitelytc Digital Media</p>
+        <h1 className="headline-tight mt-5 font-heading text-4xl font-extrabold md:text-5xl">{title}</h1>
         <p className="mt-5 max-w-2xl text-base text-text-muted md:text-lg">{subtitle}</p>
         {qualifier ? <p className="mt-4 text-sm font-semibold text-accent">{qualifier}</p> : null}
         <div className="mt-8 flex flex-wrap gap-3">
@@ -25,7 +25,7 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
         </div>
       </div>
       <div className="surface-panel overflow-hidden p-7 md:p-8">
-        <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">Revenue Infrastructure Engine</p>
+        <p className="label-precision text-text-muted">Revenue Infrastructure Engine</p>
         <p className="mt-3 text-sm text-text-muted">Traffic {"->"} UX {"->"} CRM {"->"} Ops {"->"} Reporting</p>
         <div className="mt-6 rounded-xl border border-line bg-surface-alt/30 p-6">
           <div className="relative mx-auto h-52 w-full max-w-sm">
@@ -45,7 +45,7 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
               <div key={position} className={`absolute ${position} h-2.5 w-2.5 rounded-full bg-ink ring-2 ring-accent`} />
             ))}
           </div>
-          <p className="mt-3 text-center text-xs uppercase tracking-[0.18em] text-text-muted">
+          <p className="label-precision mt-3 text-center text-text-muted">
             Blueprint View: Revenue Signal Topology
           </p>
         </div>

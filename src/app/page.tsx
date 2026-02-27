@@ -27,7 +27,7 @@ export default function HomePage() {
 
       <section className="section-wrap">
         <div className="surface-panel p-7 md:p-9">
-          <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+          <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
             The Scaling Ceiling
           </h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
@@ -57,7 +57,7 @@ export default function HomePage() {
       <ResultsTicker />
 
       <section className="section-wrap pt-0">
-        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">Measured Outcomes</h2>
+        <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">Measured Outcomes</h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
           We quantify impact in business terms: conversion efficiency, order value, operating load, and
           decision velocity.
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       <section className="section-wrap">
-        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+        <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
           Case Results Snapshot
         </h2>
         <div className="mt-8 grid gap-4">
@@ -81,7 +81,7 @@ export default function HomePage() {
       </section>
 
       <section className="section-wrap pt-0">
-        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+        <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
           Industry-Specific Infrastructure Models
         </h2>
         <div className="mt-8 grid gap-4">
@@ -117,5 +117,6 @@ export default function HomePage() {
     </>
   );
 }
+
 
 

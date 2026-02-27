@@ -8,7 +8,7 @@ export function RAP90FrameworkBlock({ phases }: RAP90FrameworkBlockProps) {
   return (
     <section aria-labelledby="framework-heading" className="space-y-8">
       <div>
-        <h2 id="framework-heading" className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+        <h2 id="framework-heading" className="headline-tight font-heading text-3xl font-bold md:text-4xl">
           RAP-90 Framework
         </h2>
         <p className="mt-3 max-w-3xl text-base text-text-muted md:text-lg">
@@ -27,16 +27,16 @@ export function RAP90FrameworkBlock({ phases }: RAP90FrameworkBlockProps) {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-line text-xs font-semibold text-text-muted">
                 {index + 1}
               </span>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">Phase Timeline</p>
+              <p className="label-precision text-text-muted">Phase Timeline</p>
             </div>
-            <h3 className="mt-2 font-heading text-xl font-semibold tracking-[0.04em]">{phase.title}</h3>
+            <h3 className="headline-tight mt-2 font-heading text-xl font-bold">{phase.title}</h3>
             <p className="mt-2 text-sm text-text-muted">{phase.goal}</p>
             <ul className="mt-4 list-disc space-y-1 pl-5 text-sm text-text-muted transition duration-200 group-hover:text-ink">
               {phase.outputs.map((output) => (
                 <li key={output}>{output}</li>
               ))}
             </ul>
-            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+            <p className="label-precision mt-5 text-accent">
               Primary KPI: {phase.kpi}
             </p>
           </article>

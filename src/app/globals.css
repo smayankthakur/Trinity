@@ -7,8 +7,9 @@
   --color-text-muted: #a0a0a0;
   --color-line: #333333;
   --color-accent: #c5a059;
-  --font-heading: var(--font-plex-mono), monospace;
+  --font-heading: var(--font-inter), sans-serif;
   --font-body: var(--font-inter), sans-serif;
+  --font-label: var(--font-jetbrains-mono), monospace;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
-  line-height: 1.6;
+  line-height: 1.72;
 }
 
 a {
@@ -49,8 +50,8 @@ a {
     font-family: var(--font-heading);
     font-size: 1.875rem;
     line-height: 1.1;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 
   .data-card {
@@ -113,6 +114,24 @@ a {
     background-image: radial-gradient(circle at 20% 20%, rgb(255 255 255 / 0.65) 0.7px, transparent 1px);
     background-size: 4px 4px;
   }
+
+  .label-precision {
+    font-family: var(--font-label);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .headline-tight {
+    letter-spacing: -0.02em;
+  }
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
 }
 
 @media (min-width: 768px) {
