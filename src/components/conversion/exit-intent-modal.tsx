@@ -36,8 +36,8 @@ export function ExitIntentModal() {
   }
 
   return (
-    <div className="fixed inset-0 z-50 hidden items-center justify-center bg-black/45 p-4 lg:flex">
-      <div className="w-full max-w-xl rounded-lg border border-line bg-white p-8">
+    <div className="fixed inset-0 z-50 hidden items-center justify-center bg-black/65 p-4 lg:flex">
+      <div className="surface-panel w-full max-w-xl p-8">
         <h2 className="font-heading text-2xl font-semibold">Before You Leave</h2>
         <p className="mt-3 text-sm text-text-muted">
           If your company is in the INR 4Cr-50Cr range, the Strategic Diagnostic identifies revenue
@@ -46,12 +46,12 @@ export function ExitIntentModal() {
         <div className="mt-6 flex gap-3">
           <CTAButton
             href="/book-diagnostic"
-            label="Book Strategic Diagnostic"
+            label="Request Strategic Diagnostic"
             eventName="exit_intent_cta_click"
           />
           <button
             type="button"
-            className="rounded-md border border-line px-5 py-3 text-sm font-semibold"
+            className="rounded-md border border-line px-5 py-3 text-sm font-semibold hover:border-accent hover:text-accent"
             onClick={() => setOpen(false)}
           >
             Continue Browsing

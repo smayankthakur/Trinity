@@ -244,9 +244,9 @@ export function BookDiagnosticForm() {
         <button
           type="submit"
           disabled={status.loading}
-          className="rounded-md bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          className="command-button disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status.loading ? "Submitting..." : "Book Strategic Diagnostic"}
+          {status.loading ? "Submitting..." : "Request Strategic Diagnostic"}
         </button>
       </div>
     </form>

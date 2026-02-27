@@ -16,7 +16,7 @@ export default function CaseResultsPage() {
       <HeroSection
         title="Case Results: Measured Commercial Outcomes"
         subtitle="Every case links system-level changes to conversion efficiency, operating leverage, and annualized revenue impact."
-        primaryCta={{ href: "/book-diagnostic", label: "Book Strategic Diagnostic" }}
+        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
         secondaryCta={{ href: "/rap-90", label: "View Revenue Framework" }}
       />
 
@@ -34,10 +34,11 @@ export default function CaseResultsPage() {
       </section>
 
       <FinalCtaSection
-        title="Review Fit and Book Strategic Diagnostic"
+        title="Review Fit and Request Strategic Diagnostic"
         qualifier="If your company is operating in the INR 4Cr-50Cr range, begin with a qualification-first diagnostic."
       />
     </>
   );
 }
+
 

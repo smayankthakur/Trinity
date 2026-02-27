@@ -27,7 +27,7 @@ export function FloatingCta() {
     <div className="fixed bottom-4 right-4 z-40 hidden lg:block">
       <CTAButton
         href="/book-diagnostic"
-        label="Book Strategic Diagnostic"
+        label="Request Strategic Diagnostic"
         className="shadow-card"
         eventName="floating_cta_click"
       />

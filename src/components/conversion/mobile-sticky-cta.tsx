@@ -11,10 +11,10 @@ export function MobileStickyCta() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-line bg-white p-3 lg:hidden">
+    <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-line bg-surface p-3 lg:hidden">
       <CTAButton
         href="/book-diagnostic"
-        label="Book Strategic Diagnostic"
+        label="Request Strategic Diagnostic"
         className="w-full"
         eventName="mobile_sticky_cta_click"
       />

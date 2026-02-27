@@ -17,12 +17,12 @@ export default function RAP90Page() {
         title="RAP-90: Revenue Architecture Program"
         subtitle="A structured 90-day engagement that diagnoses leakage, rebuilds core infrastructure, and installs a repeatable optimization system."
         qualifier="Investment range: INR 12L-28L | Designed for INR 4Cr-50Cr growth-stage companies."
-        primaryCta={{ href: "/book-diagnostic", label: "Book Strategic Diagnostic" }}
+        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
         secondaryCta={{ href: "/case-results", label: "View Case Results" }}
       />
 
       <section className="section-wrap">
-        <h2 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">
+        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
           The Revenue Bottleneck Explained
         </h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
@@ -37,7 +37,7 @@ export default function RAP90Page() {
       </section>
 
       <section className="section-wrap">
-        <h2 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">Financial Impact Model</h2>
+        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">Financial Impact Model</h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
           We model impact using your current baseline: traffic quality, conversion rates, average value,
           operational load, and decision speed.
@@ -60,9 +60,9 @@ export default function RAP90Page() {
 
       <section className="section-wrap">
         {/* Conversion trigger: explicit investment range filters low-budget leads early. */}
-        <div className="data-card">
-          <h2 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">Investment Range</h2>
-          <p className="mt-4 text-lg font-semibold">INR 12L-28L</p>
+        <div className="surface-panel p-8 md:p-10">
+          <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">Investment Range</h2>
+          <p className="mt-6 font-heading text-2xl font-semibold tracking-[0.08em] md:text-4xl">INR 12L-28L</p>
           <p className="mt-3 text-sm text-text-muted">
             This is a commercial transformation engagement, not a design-only project. Approvals are given
             to teams with decision authority, baseline data access, and execution commitment.
@@ -126,10 +126,11 @@ export default function RAP90Page() {
       </section>
 
       <FinalCtaSection
-        title="Book Strategic Diagnostic"
+        title="Request Strategic Diagnostic"
         qualifier="Qualified applicants receive an approval decision and next-step timeline within one business day."
       />
     </>
   );
 }
+
 

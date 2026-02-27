@@ -12,10 +12,10 @@ export default function BookDiagnosticPage() {
   return (
     <>
       <HeroSection
-        title="Book Strategic Diagnostic"
+        title="Request Strategic Diagnostic"
         subtitle="A qualification-first process for growth-stage teams that need revenue architecture decisions, not generic website advice."
         qualifier="Best fit: INR 4Cr-50Cr annual revenue | RAP-90 investment: INR 12L-28L"
-        primaryCta={{ href: "/book-diagnostic", label: "Book Strategic Diagnostic" }}
+        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
       />
 
       <section className="section-wrap pt-0">
@@ -33,4 +33,5 @@ export default function BookDiagnosticPage() {
     </>
   );
 }
+
 

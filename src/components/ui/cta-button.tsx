@@ -17,14 +17,14 @@ export function CTAButton({
   label,
   variant = "primary",
   className,
-  eventName = "cta_click_book_diagnostic",
+  eventName = "cta_click_request_diagnostic",
 }: CTAButtonProps) {
   const base =
-    "inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
+    "inline-flex items-center justify-center transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
   const styles =
     variant === "primary"
-      ? "bg-ink text-white hover:opacity-90 focus-visible:outline-ink"
-      : "border border-line bg-white text-ink hover:bg-surface-alt focus-visible:outline-accent";
+      ? "command-button hover:opacity-90 focus-visible:outline-accent"
+      : "ghost-command-button hover:border-accent hover:text-accent focus-visible:outline-accent";
 
   return (
     <Link

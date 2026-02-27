@@ -3,7 +3,10 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { RAP90FrameworkBlock } from "@/components/sections/rap90-framework-block";
 import { MetricCard } from "@/components/ui/metric-card";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
-import { homeMetrics, rapPhases } from "@/lib/data/site-data";
+import { homeMetrics, rapPhases, caseResults, industries } from "@/lib/data/site-data";
+import { ResultsTicker } from "@/components/sections/results-ticker";
+import { CaseResultCard } from "@/components/ui/case-result-card";
+import { IndustryBlock } from "@/components/ui/industry-block";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -15,15 +18,18 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        title="We Engineer Revenue Infrastructure for Scaling Businesses"
-        subtitle="Not websites. Structured digital architecture that converts existing demand into measurable profit."
+        title="Precision Digital Architecture for Scaling Businesses"
+        subtitle="Infrastructure engineering for revenue systems. Built for executive teams that optimize profit, not vanity metrics."
         qualifier="Best fit: INR 4Cr-50Cr companies. RAP-90 investment range: INR 12L-28L."
-        primaryCta={{ href: "/book-diagnostic", label: "Book Strategic Diagnostic" }}
+        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
         secondaryCta={{ href: "/rap-90", label: "View Revenue Framework" }}
       />
 
       <section className="section-wrap">
-        <h2 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">The Scaling Ceiling</h2>
+        <div className="surface-panel p-7 md:p-9">
+          <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+            The Scaling Ceiling
+          </h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
           Growth usually stalls when traffic, journey design, CRM, operations, and reporting are managed
           as separate systems. RAP-90 closes those gaps with one accountable revenue architecture.
@@ -40,6 +46,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       <section className="section-wrap pt-0">
@@ -47,8 +54,10 @@ export default function HomePage() {
         <RAP90FrameworkBlock phases={rapPhases} />
       </section>
 
+      <ResultsTicker />
+
       <section className="section-wrap pt-0">
-        <h2 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">Measured Outcomes</h2>
+        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">Measured Outcomes</h2>
         <p className="mt-4 max-w-3xl text-base text-text-muted">
           We quantify impact in business terms: conversion efficiency, order value, operating load, and
           decision velocity.
@@ -61,6 +70,28 @@ export default function HomePage() {
       </section>
 
       <section className="section-wrap">
+        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+          Case Results Snapshot
+        </h2>
+        <div className="mt-8 grid gap-4">
+          {caseResults.slice(0, 2).map((item) => (
+            <CaseResultCard key={item.companyType} {...item} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-wrap pt-0">
+        <h2 className="font-heading text-3xl font-semibold tracking-[0.06em] md:text-4xl">
+          Industry-Specific Infrastructure Models
+        </h2>
+        <div className="mt-8 grid gap-4">
+          {industries.map((industry) => (
+            <IndustryBlock key={industry.slug} {...industry} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-wrap pt-0">
         <div className="data-card grid gap-4 md:grid-cols-2">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-text-muted">Who This Is For</p>
@@ -80,10 +111,11 @@ export default function HomePage() {
       </section>
 
       <FinalCtaSection
-        title="Ready to Remove Revenue Bottlenecks and Scale With Control?"
+        title="Ready to Engineer Revenue Infrastructure With Executive Control?"
         qualifier="If your team is operating in the INR 4Cr-50Cr range, start with a Strategic Diagnostic."
       />
     </>
   );
 }
+
 

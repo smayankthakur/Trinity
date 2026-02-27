@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { StickyHeader } from "@/components/layout/sticky-header";
 import { Footer } from "@/components/layout/footer";
@@ -7,7 +7,7 @@ import { AnalyticsScripts } from "@/components/layout/analytics-scripts";
 import { ConversionTriggers } from "@/components/conversion/conversion-triggers";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-plex-mono" });
 
 export const metadata: Metadata = {
   title: {
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${manrope.variable}`}>
+      <body className={`${inter.variable} ${plexMono.variable}`}>
         <AnalyticsScripts />
         <StickyHeader />
-        <main>{children}</main>
+        <main className="grain-overlay">{children}</main>
         <ConversionTriggers />
         <Footer />
       </body>

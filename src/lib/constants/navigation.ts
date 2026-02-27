@@ -7,7 +7,7 @@ export const navLinks = [
 ];
 
 export const primaryCta = {
-  label: "Book Strategic Diagnostic",
+  label: "Request Strategic Diagnostic",
   href: "/book-diagnostic",
 };
 
