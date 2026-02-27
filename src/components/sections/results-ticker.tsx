@@ -33,18 +33,19 @@ export async function ResultsTicker() {
   return (
     <section className="section-wrap pt-0">
       <div className="surface-panel overflow-hidden p-4 md:p-5">
-        <div className="flex flex-wrap items-center gap-2 px-2 py-1">
+        <p className="label-precision px-2 text-text-muted">Wall of Proof</p>
+        <div className="mt-3 grid grid-flow-col auto-cols-[minmax(240px,1fr)] items-center gap-2 overflow-x-auto px-2 py-1">
           {logos.map((logo) => (
             <div
               key={logo.fileName}
-              className="flex h-16 w-40 items-center justify-center rounded-md border border-line bg-surface px-3 py-2"
+              className="flex h-[220px] items-center justify-center rounded-md border border-line bg-surface px-3 py-2"
             >
               <Image
                 src={`/assets/Client/${encodeURIComponent(logo.fileName)}`}
                 alt={`${logo.label} logo`}
-                width={140}
-                height={36}
-                className="max-h-9 w-auto object-contain"
+                width={320}
+                height={200}
+                className="h-[200px] w-auto object-contain"
                 loading="lazy"
                 unoptimized
               />
