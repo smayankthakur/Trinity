@@ -1,10 +1,26 @@
 import type { CaseResult, Industry, Metric, Phase } from "@/types";
 
 export const homeMetrics: Metric[] = [
-  { label: "Conversion Lift", value: "+38%", context: "Median across qualified engagements" },
-  { label: "AOV Increase", value: "+22%", context: "Driven by flow and checkout optimization" },
-  { label: "Ops Time Saved", value: "40 hrs/mo", context: "Manual process reduction" },
-  { label: "Decision Velocity", value: "2.1x", context: "Reporting cycle acceleration" },
+  {
+    label: "Conversion Lift",
+    value: "+38%",
+    context: "Median improvement from diagnosed bottlenecks in qualified engagements",
+  },
+  {
+    label: "AOV Increase",
+    value: "+22%",
+    context: "Journey and checkout architecture improvements across key buyer steps",
+  },
+  {
+    label: "Ops Load Reduced",
+    value: "-40 hrs/mo",
+    context: "Manual handoff and reporting tasks removed through system redesign",
+  },
+  {
+    label: "Decision Speed",
+    value: "2.1x",
+    context: "Faster weekly leadership decisions through cleaner revenue reporting",
+  },
 ];
 
 export const rapPhases: Phase[] = [
@@ -31,27 +47,29 @@ export const rapPhases: Phase[] = [
 export const caseResults: CaseResult[] = [
   {
     companyType: "D2C E-commerce",
-    problem: "High traffic with weak checkout conversion and fragmented CRM triggers.",
-    fix: "Rebuilt checkout logic, cart recovery sequencing, and CRM event mapping.",
+    problem:
+      "High traffic volume, but weak checkout completion and disconnected CRM automation.",
+    fix: "Rebuilt checkout flow, cart recovery sequencing, and CRM event architecture.",
     before: "1.8% CVR",
     after: "2.6% CVR",
-    impact: "INR 1.4Cr annualized upside",
+    impact: "INR 1.4Cr annualized revenue upside",
   },
   {
-    companyType: "B2B SaaS",
-    problem: "Qualified demos were delayed due to pipeline and attribution blind spots.",
-    fix: "Refactored routing logic, lead scoring flow, and decision dashboards.",
+    companyType: "VC-backed B2B SaaS",
+    problem:
+      "Qualified demo velocity slowed by fragmented lead routing and weak attribution confidence.",
+    fix: "Refactored lead routing, scoring rules, and weekly decision dashboard structure.",
     before: "21-day sales cycle",
     after: "15-day sales cycle",
     impact: "31% faster revenue realization",
   },
   {
     companyType: "Legacy Professional Firm",
-    problem: "Manual lead handoffs and no source-to-revenue visibility.",
-    fix: "Unified intake forms, CRM automation, and reporting governance.",
+    problem: "Manual handoffs, delayed follow-up, and no reliable source-to-revenue visibility.",
+    fix: "Unified intake, CRM workflows, and governance-level performance reporting.",
     before: "Opaque ROI",
     after: "Weekly source-level clarity",
-    impact: "26 hrs/month admin time saved",
+    impact: "26 hrs/month of partner and operations time recovered",
   },
 ];
 
@@ -70,7 +88,7 @@ export const industries: Industry[] = [
   },
   {
     slug: "legacy",
-    name: "Legacy Firms",
+    name: "Legacy Professional Firms",
     bottlenecks: ["Manual workflows", "Untracked pipeline movement", "Delayed response time"],
     outcomes: ["Systemized operations", "Lower leakage", "Governed growth ops"],
   },

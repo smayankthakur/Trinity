@@ -4,7 +4,8 @@ import { FinalCtaSection } from "@/components/sections/final-cta-section";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Operating philosophy and delivery governance behind RAP-90.",
+  description:
+    "Sitelytc's authority model: disciplined delivery governance, measurable systems architecture, and decision-grade reporting.",
 };
 
 export default function AboutPage() {
@@ -12,17 +13,21 @@ export default function AboutPage() {
     <>
       <HeroSection
         title="Authority Through Delivery Discipline"
-        subtitle="Sitelytc combines conversion architecture, operations design, and decision-grade reporting."
+        subtitle="Sitelytc combines conversion architecture, operating system design, and reporting governance for executive-level growth decisions."
         primaryCta={{ href: "/book-diagnostic", label: "Book Strategic Diagnostic" }}
-        secondaryCta={{ href: "/rap-90", label: "View RAP-90 Method" }}
+        secondaryCta={{ href: "/rap-90", label: "View RAP-90 Framework" }}
       />
 
       <section className="section-wrap">
+        <p className="max-w-3xl text-base text-text-muted">
+          We are structured as a revenue infrastructure partner, not a design vendor. Engagement quality is
+          managed through accountable cadence, KPI ownership, and executive reporting standards.
+        </p>
         <div className="grid gap-4 md:grid-cols-3">
           {[
-            "Structured governance: weekly leadership checkpoints",
-            "Single source of metric truth across demand and operations",
-            "NDA-ready delivery model for sensitive commercial data",
+            "Structured governance with weekly leadership checkpoints and decision logs",
+            "Single source of metric truth across demand, conversion, and operations",
+            "NDA-ready delivery model for commercially sensitive infrastructure data",
           ].map((item) => (
             <article key={item} className="data-card text-sm text-text-muted">
               {item}
@@ -31,7 +36,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <FinalCtaSection title="Work With a Revenue Infrastructure Partner, Not a Website Vendor" />
+      <FinalCtaSection
+        title="Work With a Revenue Infrastructure Partner, Not a Website Vendor"
+        qualifier="For teams ready to tie digital execution to measurable financial outcomes."
+      />
     </>
   );
 }
