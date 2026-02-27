@@ -16,7 +16,6 @@ export default function RAP90Page() {
       <HeroSection
         title="RAP-90: Revenue Architecture Program"
         subtitle="A structured 90-day engagement that diagnoses leakage, rebuilds core infrastructure, and installs a repeatable optimization system."
-        qualifier="Investment range: INR 12L-28L | Designed for INR 4Cr-50Cr growth-stage companies."
         primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
         secondaryCta={{ href: "/case-results", label: "View Case Results" }}
       />

@@ -20,7 +20,6 @@ export default function HomePage() {
       <HeroSection
         title="Precision Digital Architecture for Scaling Businesses"
         subtitle="Infrastructure engineering for revenue systems. Built for executive teams that optimize profit, not vanity metrics."
-        qualifier="Best fit: INR 4Cr-50Cr companies. RAP-90 investment range: INR 12L-28L."
         primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
         secondaryCta={{ href: "/rap-90", label: "View Revenue Framework" }}
       />
