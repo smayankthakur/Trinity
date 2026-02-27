@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   description:
     "RAP-90 helps INR 4Cr-50Cr growth-stage companies remove revenue bottlenecks in 90 days.",
   metadataBase: new URL("https://sitelytc.com"),
+  icons: {
+    icon: "/assets/favicon.webp",
+    shortcut: "/assets/favicon.webp",
+    apple: "/assets/favicon.webp",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
