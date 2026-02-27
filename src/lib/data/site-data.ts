@@ -94,6 +94,8 @@ export const industries: Industry[] = [
   },
 ];
 
+export const workPageLogos = ["SaaSGlobal", "EcomFlow", "NexusFin"] as const;
+
 export const diagnosticFields = [
   "Company name",
   "Industry",
