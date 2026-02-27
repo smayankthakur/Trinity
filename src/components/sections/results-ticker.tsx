@@ -34,7 +34,7 @@ export async function ResultsTicker() {
     <section className="section-wrap pt-0">
       <div className="surface-panel overflow-hidden p-4 md:p-5">
         <p className="label-precision px-2 text-text-muted">Wall of Proof</p>
-        <div className="mt-3 grid grid-flow-col auto-cols-[minmax(240px,1fr)] items-center gap-2 overflow-x-auto px-2 py-1">
+        <div className="animated-scrollbar mt-3 grid grid-flow-col auto-cols-[minmax(240px,1fr)] items-center gap-2 overflow-x-auto px-2 py-1">
           {logos.map((logo) => (
             <div
               key={logo.fileName}

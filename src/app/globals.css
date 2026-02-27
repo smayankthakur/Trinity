@@ -153,6 +153,27 @@ a {
     border-color: rgb(197 160 89 / 0.62);
     box-shadow: 0 24px 48px rgb(197 160 89 / 0.05);
   }
+
+  .animated-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(197 160 89 / 0.85) rgb(36 36 36 / 0.9);
+  }
+
+  .animated-scrollbar::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .animated-scrollbar::-webkit-scrollbar-track {
+    background: rgb(36 36 36 / 0.9);
+    border-radius: 999px;
+  }
+
+  .animated-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: linear-gradient(90deg, #a68648, #c5a059, #a68648);
+    background-size: 200% 100%;
+    animation: scrollbar-glide 2.4s linear infinite;
+  }
 }
 
 h1,
@@ -183,5 +204,15 @@ h3 {
   50% {
     opacity: 1;
     transform: scale(1.12);
+  }
+}
+
+@keyframes scrollbar-glide {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
   }
 }
