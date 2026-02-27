@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { StickyHeader } from "@/components/layout/sticky-header";
 import { Footer } from "@/components/layout/footer";
@@ -9,7 +9,12 @@ import { ConversionTriggers } from "@/components/conversion/conversion-triggers"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument-serif",
+  weight: "400",
 });
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -30,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}>
         <AnalyticsScripts />
         <StickyHeader />
         <main className="grain-overlay">{children}</main>

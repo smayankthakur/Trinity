@@ -7,7 +7,7 @@
   --color-text-muted: #a0a0a0;
   --color-line: #333333;
   --color-accent: #c5a059;
-  --font-heading: var(--font-inter), sans-serif;
+  --font-heading: var(--font-instrument-serif), serif;
   --font-body: var(--font-inter), sans-serif;
   --font-label: var(--font-jetbrains-mono), monospace;
 }
@@ -24,6 +24,7 @@ body {
     radial-gradient(circle at 80% 80%, rgb(42 42 42 / 0.2), transparent 42%);
   color: var(--color-ink);
   font-family: var(--font-body);
+  font-weight: 300;
   text-rendering: optimizeLegibility;
   line-height: 1.72;
 }
@@ -43,30 +44,37 @@ a {
     margin-inline: auto;
     width: 100%;
     max-width: 84rem;
-    padding: 4.5rem 1.25rem;
+    padding: 5.4rem 1.25rem;
   }
 
   .kpi-number {
     font-family: var(--font-heading);
     font-size: 1.875rem;
     line-height: 1.1;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: -0.02em;
   }
 
   .data-card {
-    border: 1px solid var(--color-line);
+    border: 1px solid rgb(255 255 255 / 0.05);
     border-radius: 0.875rem;
     background: linear-gradient(180deg, rgb(42 42 42 / 82%), rgb(30 30 30 / 90%));
     padding: 1.75rem;
     box-shadow: 0 18px 40px rgb(0 0 0 / 0.35);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
   }
 
   .surface-panel {
-    border: 1px solid var(--color-line);
+    border: 1px solid rgb(255 255 255 / 0.05);
     border-radius: 1rem;
     background: linear-gradient(180deg, rgb(42 42 42 / 90%), rgb(30 30 30 / 95%));
+    backdrop-filter: blur(20px);
+  }
+
+  .glass-card {
+    border: 1px solid rgb(255 255 255 / 0.05);
+    backdrop-filter: blur(20px);
+    background: rgb(36 36 36 / 0.65);
   }
 
   .command-button {
@@ -126,20 +134,54 @@ a {
   .headline-tight {
     letter-spacing: -0.02em;
   }
+
+  .system-dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px rgb(197 160 89 / 0.55);
+    animation: pulse-dot 1.8s ease-in-out infinite;
+  }
+
+  .metric-card {
+    transition: border-color 0.24s ease, box-shadow 0.24s ease;
+  }
+
+  .metric-card:hover {
+    border-color: rgb(197 160 89 / 0.62);
+    box-shadow: 0 24px 48px rgb(197 160 89 / 0.05);
+  }
 }
 
 h1,
 h2,
 h3 {
   letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
   .section-wrap {
-    padding: 6.5rem 2rem;
+    padding: 7.8rem 2rem;
   }
 
   .kpi-number {
     font-size: 2.25rem;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
   }
 }
