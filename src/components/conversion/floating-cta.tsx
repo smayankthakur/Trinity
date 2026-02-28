@@ -19,18 +19,19 @@ export function FloatingCta() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible || pathname === "/book-diagnostic") {
+  if (!visible || pathname.startsWith("/diagnostic")) {
     return null;
   }
 
   return (
     <div className="fixed bottom-4 right-4 z-40 hidden lg:block">
       <CTAButton
-        href="/book-diagnostic"
-        label="Request Strategic Diagnostic"
+        href="/diagnostic"
+        label="Start Your Revenue Leakage Audit"
         className="shadow-card"
         eventName="floating_cta_click"
       />
     </div>
   );
 }
+

@@ -16,7 +16,7 @@ export default function IndustriesPage() {
       <HeroSection
         title="Industry-Specific Revenue Architecture"
         subtitle="Different business models fail at different points in the revenue path. We adapt RAP-90 architecture to the constraints that actually matter."
-        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
+        primaryCta={{ href: "/diagnostic", label: "Start Your Revenue Leakage Audit" }}
         secondaryCta={{ href: "/case-results", label: "View Case Results" }}
       />
 
@@ -33,11 +33,12 @@ export default function IndustriesPage() {
       </section>
 
       <FinalCtaSection
-        title="If Your Team Matches This Profile, Request Strategic Diagnostic"
+        title="If Your Team Matches This Profile, Start Your Revenue Leakage Audit"
         qualifier="Qualification is based on business stage, decision ownership, and implementation readiness."
       />
     </>
   );
 }
+
 
 

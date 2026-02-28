@@ -7,7 +7,8 @@ export const navLinks = [
 ];
 
 export const primaryCta = {
-  label: "Request Strategic Diagnostic",
-  href: "/book-diagnostic",
+  label: "Start Your Revenue Leakage Audit",
+  href: "/diagnostic",
 };
+
 

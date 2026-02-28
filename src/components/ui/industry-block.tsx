@@ -26,3 +26,4 @@ export function IndustryBlock({ name, bottlenecks, outcomes }: Industry) {
   );
 }
 
+

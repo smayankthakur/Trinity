@@ -27,3 +27,4 @@ export type Industry = {
   outcomes: string[];
 };
 
+

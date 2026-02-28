@@ -9,8 +9,8 @@ export function Footer() {
           <div className="flex gap-4">
             <Link href="/privacy-policy">Privacy</Link>
             <Link href="/terms">Terms</Link>
-            <Link href="/book-diagnostic" className="font-semibold text-accent">
-              Request Strategic Diagnostic
+            <Link href="/diagnostic" className="font-semibold text-accent">
+              Start Your Revenue Leakage Audit
             </Link>
           </div>
         </div>
@@ -18,4 +18,5 @@ export function Footer() {
     </footer>
   );
 }
+
 

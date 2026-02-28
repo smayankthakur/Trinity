@@ -37,3 +37,4 @@ export function evaluateQualification(input: DiagnosticFormInput): Qualification
 
   return { qualified: true };
 }
+

@@ -14,7 +14,7 @@ export default function AboutPage() {
       <HeroSection
         title="Authority Through Delivery Discipline"
         subtitle="Sitelytc combines conversion architecture, operating system design, and reporting governance for executive-level growth decisions."
-        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
+        primaryCta={{ href: "/diagnostic", label: "Start Your Revenue Leakage Audit" }}
         secondaryCta={{ href: "/rap-90", label: "View RAP-90 Framework" }}
       />
 
@@ -43,5 +43,6 @@ export default function AboutPage() {
     </>
   );
 }
+
 
 

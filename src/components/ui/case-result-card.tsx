@@ -23,3 +23,4 @@ export function CaseResultCard({ companyType, problem, fix, before, after, impac
   );
 }
 
+

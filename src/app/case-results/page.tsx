@@ -16,7 +16,7 @@ export default function CaseResultsPage() {
       <HeroSection
         title="Case Results: Measured Commercial Outcomes"
         subtitle="Every case links system-level changes to conversion efficiency, operating leverage, and annualized revenue impact."
-        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
+        primaryCta={{ href: "/diagnostic", label: "Start Your Revenue Leakage Audit" }}
         secondaryCta={{ href: "/rap-90", label: "View Revenue Framework" }}
       />
 
@@ -34,11 +34,12 @@ export default function CaseResultsPage() {
       </section>
 
       <FinalCtaSection
-        title="Review Fit and Request Strategic Diagnostic"
+        title="Review Fit and Start Your Revenue Leakage Audit"
         qualifier="If your company is operating in the INR 4Cr-50Cr range, begin with a qualification-first diagnostic."
       />
     </>
   );
 }
+
 
 

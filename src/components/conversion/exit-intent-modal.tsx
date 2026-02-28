@@ -10,7 +10,7 @@ export function ExitIntentModal() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/book-diagnostic") {
+    if (pathname.startsWith("/diagnostic")) {
       return;
     }
 
@@ -45,8 +45,8 @@ export function ExitIntentModal() {
         </p>
         <div className="mt-6 flex gap-3">
           <CTAButton
-            href="/book-diagnostic"
-            label="Request Strategic Diagnostic"
+            href="/diagnostic"
+            label="Start Your Revenue Leakage Audit"
             eventName="exit_intent_cta_click"
           />
           <button
@@ -61,3 +61,4 @@ export function ExitIntentModal() {
     </div>
   );
 }
+

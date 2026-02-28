@@ -246,9 +246,10 @@ export function BookDiagnosticForm() {
           disabled={status.loading}
           className="command-button disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {status.loading ? "Submitting..." : "Request Strategic Diagnostic"}
+          {status.loading ? "Submitting..." : "Start Your Revenue Leakage Audit"}
         </button>
       </div>
     </form>
   );
 }
+

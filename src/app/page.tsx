@@ -20,7 +20,7 @@ export default function HomePage() {
       <HeroSection
         title="Precision Digital Architecture for Scaling Businesses"
         subtitle="Infrastructure engineering for revenue systems. Built for executive teams that optimize profit, not vanity metrics."
-        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
+        primaryCta={{ href: "/diagnostic", label: "Start Your Revenue Leakage Audit" }}
         secondaryCta={{ href: "/rap-90", label: "View Revenue Framework" }}
       />
 
@@ -116,6 +116,7 @@ export default function HomePage() {
     </>
   );
 }
+
 
 
 

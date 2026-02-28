@@ -17,7 +17,7 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
         <p className="mt-5 max-w-2xl text-base text-text-muted md:text-lg">{subtitle}</p>
         {qualifier ? <p className="mt-4 text-sm font-semibold text-accent">{qualifier}</p> : null}
         <div className="mt-8 flex flex-wrap gap-3">
-          {/* Primary conversion trigger: consistent Request Strategic Diagnostic CTA. */}
+          {/* Primary conversion trigger: consistent Start Your Revenue Leakage Audit CTA. */}
           <CTAButton href={primaryCta.href} label={primaryCta.label} />
           {secondaryCta ? (
             <CTAButton href={secondaryCta.href} label={secondaryCta.label} variant="secondary" />
@@ -53,4 +53,5 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
     </section>
   );
 }
+
 

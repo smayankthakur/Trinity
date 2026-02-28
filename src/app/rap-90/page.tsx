@@ -16,7 +16,7 @@ export default function RAP90Page() {
       <HeroSection
         title="RAP-90: Revenue Architecture Program"
         subtitle="A structured 90-day engagement that diagnoses leakage, rebuilds core infrastructure, and installs a repeatable optimization system."
-        primaryCta={{ href: "/book-diagnostic", label: "Request Strategic Diagnostic" }}
+        primaryCta={{ href: "/diagnostic", label: "Start Your Revenue Leakage Audit" }}
         secondaryCta={{ href: "/case-results", label: "View Case Results" }}
       />
 
@@ -125,12 +125,13 @@ export default function RAP90Page() {
       </section>
 
       <FinalCtaSection
-        title="Request Strategic Diagnostic"
+        title="Start Your Revenue Leakage Audit"
         qualifier="Qualified applicants receive an approval decision and next-step timeline within one business day."
       />
     </>
   );
 }
+
 
 
 

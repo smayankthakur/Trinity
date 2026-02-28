@@ -14,3 +14,4 @@ export function trackEvent(event: string, payload: Record<string, unknown> = {})
   window.dataLayer = window.dataLayer ?? [];
   window.dataLayer.push({ event, ...payload });
 }
+
