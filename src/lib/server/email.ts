@@ -192,3 +192,75 @@ export async function sendStrategicDiagnosticEmail(
   return { sent: true, to };
 }
 
+export async function sendRevenueChecklistEmail(input: {
+  to: string;
+  name: string;
+  downloadUrl: string;
+}): Promise<EmailResult> {
+  const transport = getTransport();
+  if (!transport) {
+    return {
+      sent: false,
+      to: input.to,
+      reason: "missing_email_transport_config",
+    };
+  }
+
+  const from = process.env.LEAD_FROM_EMAIL ?? process.env.SMTP_USER ?? process.env.GMAIL_USER;
+  if (!from) {
+    return {
+      sent: false,
+      to: input.to,
+      reason: "missing_from_email",
+    };
+  }
+
+  const subject = "Your Website Revenue Leak Checklist";
+  const text = [
+    `Hi ${input.name},`,
+    "",
+    "Your Website Revenue Leak Checklist is ready.",
+    `Download link (expires in 24 hours, single-use): ${input.downloadUrl}`,
+    "",
+    "If you are serious about structural growth, schedule your strategy call:",
+    "https://calendly.com/sitelytc/sitelytc-meet",
+  ].join("\n");
+
+  const html = `
+    <div style="font-family: Arial, Helvetica, sans-serif; color: #111827; line-height: 1.6;">
+      <div style="max-width: 640px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
+        <div style="background: #0B1C2D; color: #f8fafc; padding: 16px 20px; font-weight: 700;">
+          Sitelytc Digital Media
+        </div>
+        <div style="padding: 20px;">
+          <p>Hi ${input.name},</p>
+          <p>Your <strong>Website Revenue Leak Checklist</strong> is ready.</p>
+          <p>
+            <a href="${input.downloadUrl}" style="display:inline-block;background:#C5A059;color:#0B1C2D;text-decoration:none;padding:10px 14px;border-radius:6px;font-weight:700;">
+              Download Checklist
+            </a>
+          </p>
+          <p style="font-size: 13px; color: #6b7280;">
+            This link is single-use and expires in 24 hours.
+          </p>
+          <p style="margin-top: 18px;">
+            If you’re serious about structural growth, book your strategy call:
+            <br/>
+            <a href="https://calendly.com/sitelytc/sitelytc-meet">https://calendly.com/sitelytc/sitelytc-meet</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  `;
+
+  await transport.sendMail({
+    from,
+    to: input.to,
+    subject,
+    text,
+    html,
+  });
+
+  return { sent: true, to: input.to };
+}
+
