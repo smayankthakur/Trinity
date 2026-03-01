@@ -16,51 +16,101 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        title="If Your Website Isn’t Converting, It’s Bleeding Money."
+        title="If Your Website Isn't Converting, It's Bleeding Money."
         subtitle="We help D2C & B2B brands between INR 50L-INR 5Cr revenue eliminate revenue leaks and turn underperforming traffic into measurable profit."
-        qualifier="Most brands don’t have a traffic problem. They have a conversion architecture problem."
+        qualifier="Most brands don't have a traffic problem. They have a conversion architecture problem."
         primaryCta={{ href: calendlyUrl, label: "Schedule Strategy Call" }}
       />
 
       <section className="section-wrap">
         <div className="surface-panel p-7 md:p-9">
-          <div className="grid gap-8 lg:grid-cols-[1fr_420px]">
+          <div className="grid gap-10 lg:grid-cols-[1fr_520px]">
             <div>
               <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
-                Your Website Is Not a Growth Engine. It’s a Leak.
+                Your Website Isn&apos;t Broken.
+                <br />
+                It&apos;s Structurally Leaking Revenue.
               </h2>
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <p className="mt-4 text-sm text-text-muted md:text-base">
+                Traffic doesn&apos;t create growth. Architecture does.
+                <br />
+                If your structure is weak, traffic amplifies loss.
+              </p>
+
+              <div className="mt-8 grid gap-3 md:grid-cols-2">
                 {[
-                  "Rising CAC with no AOV engineering",
-                  "High traffic, low conversion",
-                  "Checkout friction",
-                  "No funnel psychology",
-                  "No retention mechanics",
-                ].map((item) => (
-                  <div key={item} className="data-card">
-                    <p className="text-sm text-text-muted">{item}</p>
-                  </div>
+                  {
+                    title: "Acquisition",
+                    points: ["Rising CAC with stagnant AOV", "High traffic, low conversion"],
+                  },
+                  {
+                    title: "Conversion",
+                    points: [
+                      "Checkout friction",
+                      "Weak offer positioning",
+                      "No funnel psychology",
+                    ],
+                  },
+                  {
+                    title: "Retention",
+                    points: ["No lifecycle automation", "No retention mechanics"],
+                  },
+                ].map((group) => (
+                  <article
+                    key={group.title}
+                    className="rounded-lg border border-line bg-surface px-4 py-3 transition hover:border-accent/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.1)]"
+                  >
+                    <p className="label-precision text-text-muted">{group.title}</p>
+                    <ul className="mt-2 grid gap-1.5 text-sm text-text-muted">
+                      {group.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </article>
                 ))}
               </div>
-              <p className="mt-6 border-t border-line pt-5 text-base font-semibold text-accent">
-                Traffic amplifies structure. If structure is weak, traffic magnifies loss.
-              </p>
             </div>
 
-            <aside className="overflow-hidden rounded-xl border border-line bg-surface shadow-[0_14px_40px_rgba(0,0,0,0.2)]">
-              <iframe
-                title="Strategic Diagnostic Form"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSf75Hi80X2SR0tICo3cFglwRDqfRIBHUUqwGG2m4F9_N7L5fQ/viewform?embedded=true"
-                width="100%"
-                height={820}
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                loading="lazy"
-                className="block w-full"
-              >
-                Loading...
-              </iframe>
+            <aside className="space-y-4">
+              <div className="border-t border-line pt-4">
+                <p className="label-precision text-text-muted">Run Your Revenue Leak Diagnostic</p>
+                <p className="mt-2 text-sm text-text-muted">
+                  Takes 2 minutes. Outputs structural growth map.
+                </p>
+              </div>
+
+              <div className="mx-auto w-full max-w-[520px] rounded-2xl border border-white/10 bg-[#111111] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.35),inset_0_0_28px_rgba(197,160,89,0.07)]">
+                <iframe
+                  title="Strategic Diagnostic Form"
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSf75Hi80X2SR0tICo3cFglwRDqfRIBHUUqwGG2m4F9_N7L5fQ/viewform?embedded=true"
+                  width="100%"
+                  height={820}
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  loading="lazy"
+                  className="block w-full rounded-lg"
+                >
+                  Loading...
+                </iframe>
+              </div>
+
+              <div className="rounded-xl border border-line bg-surface px-4 py-4">
+                <p className="label-precision text-text-muted">What You&apos;ll Get</p>
+                <ul className="mt-3 grid gap-2 text-sm text-text-muted">
+                  {[
+                    "Revenue leak heatmap",
+                    "Conversion friction score",
+                    "CRM efficiency gap insight",
+                    "Next-step growth roadmap",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="text-accent">?</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </aside>
           </div>
         </div>
@@ -72,7 +122,7 @@ export default function HomePage() {
       <section className="section-wrap pt-0">
         <div className="surface-panel p-7 md:p-9">
           <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
-            The SITELYTC Growth Engine™
+            The SITELYTC Growth Engine(TM)
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -148,7 +198,7 @@ export default function HomePage() {
             <article className="data-card">
               <p className="label-precision text-text-muted">Strategic Fix</p>
               <p className="mt-2 text-sm text-text-muted">
-                Applied SITELYTC Growth Engine™.
+                Applied SITELYTC Growth Engine(TM).
               </p>
             </article>
             <article className="data-card">
@@ -166,13 +216,13 @@ export default function HomePage() {
       <section className="section-wrap pt-0">
         <div className="surface-panel p-7 md:p-9">
           <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
-            I’m Not Here to Design Your Website. I’m Here to Challenge Your Assumptions.
+            I&apos;m Not Here to Design Your Website. I&apos;m Here to Challenge Your Assumptions.
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="data-card">
               <p className="label-precision text-text-muted">Hard Truths</p>
               <ul className="mt-2 grid gap-2 text-sm text-text-muted">
-                <li>More traffic won’t fix structural inefficiency.</li>
+                <li>More traffic won&apos;t fix structural inefficiency.</li>
                 <li>Beautiful does not equal profitable.</li>
                 <li>Most agencies optimize visuals, not economics.</li>
               </ul>

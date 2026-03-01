@@ -24,30 +24,21 @@ export function HeroSection({ title, subtitle, primaryCta, secondaryCta, qualifi
           ) : null}
         </div>
       </div>
-      <div className="surface-panel overflow-hidden p-7 md:p-8">
-        <p className="label-precision text-text-muted">Revenue Infrastructure Engine</p>
-        <p className="mt-3 text-sm text-text-muted">Traffic {"->"} UX {"->"} CRM {"->"} Ops {"->"} Reporting</p>
-        <div className="mt-6 rounded-xl border border-line bg-surface-alt/30 p-6">
-          <div className="relative mx-auto h-52 w-full max-w-sm">
-            <div className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full border border-accent/50" />
-            <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-line" />
-            <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent" />
-            {[
-              "left-2 top-12",
-              "left-16 top-2",
-              "right-16 top-2",
-              "right-2 top-12",
-              "right-2 bottom-12",
-              "right-16 bottom-2",
-              "left-16 bottom-2",
-              "left-2 bottom-12",
-            ].map((position) => (
-              <div key={position} className={`absolute ${position} h-2.5 w-2.5 rounded-full bg-ink ring-2 ring-accent`} />
-            ))}
-          </div>
-          <p className="label-precision mt-3 text-center text-text-muted">
-            Blueprint View: Revenue Signal Topology
+      <div className="infrastructure-card">
+        <div className="infrastructure-header">
+          <span className="label-precision text-text-muted">REVENUE INFRASTRUCTURE ENGINE</span>
+          <p className="sub mt-3 text-sm text-text-muted">
+            Traffic {"->"} UX {"->"} CRM {"->"} Ops {"->"} Reporting
           </p>
+        </div>
+        <div className="infrastructure-image-wrapper">
+          <img
+            src="/assets/revenue-infrastructure.png"
+            alt="Revenue Infrastructure Engine - Traffic UX CRM Ops Reporting Architecture"
+            width={1200}
+            height={760}
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
