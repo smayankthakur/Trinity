@@ -27,7 +27,7 @@ export function GoogleDiagnosticEmbed() {
   const [mounted, setMounted] = useState(false);
   const [iframeReady, setIframeReady] = useState(false);
   const [showSuccessPanel, setShowSuccessPanel] = useState(false);
-  const [iframeHeight, setIframeHeight] = useState(1400);
+  const [iframeHeight, setIframeHeight] = useState(820);
   const iframeLoadCount = useRef(0);
   const sentScroll50 = useRef(false);
   const sentScroll90 = useRef(false);
@@ -49,17 +49,9 @@ export function GoogleDiagnosticEmbed() {
 
   useEffect(() => {
     const calcHeight = () => {
-      const vw = window.innerWidth;
       const vh = window.innerHeight;
-      if (vw < 640) {
-        setIframeHeight(Math.max(1200, Math.round(vh * 1.9)));
-        return;
-      }
-      if (vw < 1024) {
-        setIframeHeight(Math.max(1300, Math.round(vh * 1.75)));
-        return;
-      }
-      setIframeHeight(Math.max(1400, Math.round(vh * 1.65)));
+      const adaptive = Math.round(vh * 1.12);
+      setIframeHeight(Math.min(950, Math.max(820, adaptive)));
     };
 
     calcHeight();
