@@ -125,7 +125,7 @@ export function GoogleDiagnosticEmbed() {
             <div
               className="absolute inset-0 z-10 animate-pulse bg-surface"
               aria-hidden="true"
-              style={{ minHeight: `${iframeHeight}px` }}
+              style={{ height: `${iframeHeight}px` }}
             />
           )}
 
@@ -141,12 +141,12 @@ export function GoogleDiagnosticEmbed() {
               loading="lazy"
               onLoad={onIframeLoad}
               className="block w-full rounded-xl"
-              style={{ minHeight: `${iframeHeight}px`, height: "100%" }}
+              style={{ height: `${iframeHeight}px` }}
             >
               Loading…
             </iframe>
           ) : (
-            <div className="bg-surface" style={{ minHeight: `${iframeHeight}px` }} />
+            <div className="bg-surface" style={{ height: `${iframeHeight}px` }} />
           )}
         </div>
       </div>
