@@ -24,25 +24,45 @@ export default function HomePage() {
 
       <section className="section-wrap">
         <div className="surface-panel p-7 md:p-9">
-          <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
-            Your Website Is Not a Growth Engine. It’s a Leak.
-          </h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {[
-              "Rising CAC with no AOV engineering",
-              "High traffic, low conversion",
-              "Checkout friction",
-              "No funnel psychology",
-              "No retention mechanics",
-            ].map((item) => (
-              <div key={item} className="data-card">
-                <p className="text-sm text-text-muted">{item}</p>
+          <div className="grid gap-8 lg:grid-cols-[1fr_420px]">
+            <div>
+              <h2 className="headline-tight font-heading text-3xl font-bold md:text-4xl">
+                Your Website Is Not a Growth Engine. It’s a Leak.
+              </h2>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {[
+                  "Rising CAC with no AOV engineering",
+                  "High traffic, low conversion",
+                  "Checkout friction",
+                  "No funnel psychology",
+                  "No retention mechanics",
+                ].map((item) => (
+                  <div key={item} className="data-card">
+                    <p className="text-sm text-text-muted">{item}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+              <p className="mt-6 border-t border-line pt-5 text-base font-semibold text-accent">
+                Traffic amplifies structure. If structure is weak, traffic magnifies loss.
+              </p>
+            </div>
+
+            <aside className="overflow-hidden rounded-xl border border-line bg-surface shadow-[0_14px_40px_rgba(0,0,0,0.2)]">
+              <iframe
+                title="Strategic Diagnostic Form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSf75Hi80X2SR0tICo3cFglwRDqfRIBHUUqwGG2m4F9_N7L5fQ/viewform?embedded=true"
+                width="100%"
+                height={820}
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                loading="lazy"
+                className="block w-full"
+              >
+                Loading...
+              </iframe>
+            </aside>
           </div>
-          <p className="mt-6 border-t border-line pt-5 text-base font-semibold text-accent">
-            Traffic amplifies structure. If structure is weak, traffic magnifies loss.
-          </p>
         </div>
       </section>
 
