@@ -133,15 +133,15 @@ export function GoogleDiagnosticEmbed() {
             <iframe
               title="Strategic Diagnostic Form"
               src={FORM_SRC}
-              width="100%"
-              height={iframeHeight}
+              width="auto"
+              height="100%"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
               loading="lazy"
               onLoad={onIframeLoad}
               className="block w-full rounded-xl"
-              style={{ minHeight: `${iframeHeight}px` }}
+              style={{ minHeight: `${iframeHeight}px`, height: "100%" }}
             >
               Loading…
             </iframe>
