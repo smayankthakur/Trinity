@@ -27,6 +27,7 @@ export function GoogleDiagnosticEmbed() {
   const [mounted, setMounted] = useState(false);
   const [iframeReady, setIframeReady] = useState(false);
   const [showSuccessPanel, setShowSuccessPanel] = useState(false);
+  const [iframeHeight, setIframeHeight] = useState(1400);
   const iframeLoadCount = useRef(0);
   const sentScroll50 = useRef(false);
   const sentScroll90 = useRef(false);
@@ -44,6 +45,26 @@ export function GoogleDiagnosticEmbed() {
   useEffect(() => {
     const timer = window.setTimeout(() => setMounted(true), 120);
     return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const calcHeight = () => {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      if (vw < 640) {
+        setIframeHeight(Math.max(1200, Math.round(vh * 1.9)));
+        return;
+      }
+      if (vw < 1024) {
+        setIframeHeight(Math.max(1300, Math.round(vh * 1.75)));
+        return;
+      }
+      setIframeHeight(Math.max(1400, Math.round(vh * 1.65)));
+    };
+
+    calcHeight();
+    window.addEventListener("resize", calcHeight);
+    return () => window.removeEventListener("resize", calcHeight);
   }, []);
 
   useEffect(() => {
@@ -104,7 +125,7 @@ export function GoogleDiagnosticEmbed() {
             <div
               className="absolute inset-0 z-10 animate-pulse bg-surface"
               aria-hidden="true"
-              style={{ minHeight: "1400px" }}
+              style={{ minHeight: `${iframeHeight}px` }}
             />
           )}
 
@@ -113,19 +134,19 @@ export function GoogleDiagnosticEmbed() {
               title="Strategic Diagnostic Form"
               src={FORM_SRC}
               width="100%"
-              height={1400}
+              height={iframeHeight}
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
               loading="lazy"
               onLoad={onIframeLoad}
               className="block w-full rounded-xl"
-              style={{ minHeight: "1400px" }}
+              style={{ minHeight: `${iframeHeight}px` }}
             >
               Loading…
             </iframe>
           ) : (
-            <div className="bg-surface" style={{ minHeight: "1400px" }} />
+            <div className="bg-surface" style={{ minHeight: `${iframeHeight}px` }} />
           )}
         </div>
       </div>
